@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak & Pemesanan - Gantai Somay</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            max-width: 600px;
+        }
+        .contact-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Gantai Somay</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                <li class="nav-item active"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulir Pemesanan -->
+    <div class="container contact-section">
+        <h3 class="text-center">Formulir Pemesanan</h3>
+        <form id="orderForm" action="submit-order.php" method="POST">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="produk">Pilih Produk</label>
+                <select class="form-control" id="produk" name="produk" required>
+                    <option value="Somay Ikan" data-price="20000">Somay Ikan - Rp 20.000</option>
+                    <option value="Somay Ayam" data-price="15000">Somay Ayam - Rp 15.000</option>
+                    <option value="Somay Campur" data-price="25000">Somay Campur - Rp 25.000</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="jumlah">Jumlah Porsi</label>
+                <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" value="1" required>
+            </div>
+            <div class="form-group">
+                <label for="pesan">Catatan Tambahan</label>
+                <textarea class="form-control" id="pesan" name="pesan" rows="3" placeholder="Tambahkan catatan jika perlu"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="total">Total Harga</label>
+                <input type="text" class="form-control" id="total" name="total" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Pesan Sekarang</button>
+        </form>
+    </div>
+
+    <!-- Kontak Section -->
+    <div class="container text-center mt-4">
+        <h4>Hubungi Kami</h4>
+        <p>Email: info@gantaisomay.com</p>
+        <p>Telepon: +62 812-3456-7890</p>
+        <p>Alamat: Jl. Barawaja 2 No. 05, Makassar</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-4">
+        <p>&copy; 2025 Gantai Somay. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('input', function() {
+            const produkSelect = document.getElementById('produk');
+            const jumlahInput = document.getElementById('jumlah');
+            const totalInput = document.getElementById('total');
+            
+            const selectedOption = produkSelect.options[produkSelect.selectedIndex];
+            const price = parseInt(selectedOption.getAttribute('data-price'));
+            const quantity = parseInt(jumlahInput.value);
+            
+            const totalPrice = price * quantity;
+            totalInput.value = 'Rp ' + totalPrice.toLocaleString();
+        });
+    </script>
+
+</body>
+</html>

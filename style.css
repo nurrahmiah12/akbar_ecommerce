@@ -1,0 +1,30 @@
+/* Navbar */
+.navbar {
+    background-color: #f8f9fa;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background: url('../images/banner.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+}
+
+/* Card Produk */
+.card {
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background: #343a40;
+    color: white;
+    padding: 10px 0;
+}

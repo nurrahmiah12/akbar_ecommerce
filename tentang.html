@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Gantai Somay</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Hero Section */
+        .hero {
+            background: url('tentang-bg.jpg') no-repeat center center/cover;
+            color: rgb(177, 35, 10);
+            padding: 120px 20px;
+            text-align: center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        /* Produk Section */
+        .info-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: -50px;
+        }
+        .info-section h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .info-section p {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* Centering Products and Adding Hover Effects */
+        .products-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            max-width: 320px;
+        }
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .card img:hover {
+            transform: scale(1.05);
+        }
+        .card-body {
+            text-align: center;
+            padding: 25px;
+            background: #fff;
+            border-radius: 0 0 20px 20px;
+        }
+        .card-body h4 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .card-body p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #f8d7da;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Gantai Somay</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                <li class="nav-item active"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1 class="display-4"> Gantai Somay</h1>
+            <p>Somay Lezat, Cita Rasa Autentik</p>
+        </div>
+    </div>
+
+    <!-- Tentang Kami -->
+    <div class="container text-center mt-5">
+        <h2>Siapa Kami?</h2>
+        <p>Gantai Somay adalah bisnis kuliner yang menghadirkan somay berkualitas dengan cita rasa khas yang tak terlupakan. Kami menggunakan bahan segar dan resep turun-temurun untuk memberikan pengalaman kuliner terbaik bagi pelanggan.</p>
+    </div>
+
+    <!-- Produk Kami -->
+    <div class="container info-section">
+        <h2 class="text-center">Produk Kami</h2>
+        <p class="text-center mb-4">Kami menghadirkan berbagai varian somay yang cocok untuk semua selera.</p>
+        <div class="products-container">
+            <div class="card">
+                <img src="4.png" alt="Somay Ikan">
+                <div class="card-body">
+                    <h4>Somay Ikan</h4>
+                    <p>Dibuat dari ikan segar pilihan, memberikan rasa gurih dan lezat.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="5.png" alt="Somay Ayam">
+                <div class="card-body">
+                    <h4>Somay Ayam</h4>
+                    <p>Kombinasi daging ayam dan bumbu khas untuk cita rasa yang kaya.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="6.png" alt="Somay Udang">
+                <div class="card-body">
+                    <h4>Somay Udang</h4>
+                    <p>Campuran berbagai bumbu dan udang somay dalam satu porsi untuk pengalaman lengkap.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Gantai Somay. All rights reserved. | <a href="kontak.html">Kontak Kami</a></p>
+    </footer>
+
+    <!-- JS and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
